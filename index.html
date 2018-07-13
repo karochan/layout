@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+	<title>	Layout </title>
+
+	<meta name="description" content="Przykładowy projekt strony" />
+	<meta name="keywords" content="przykład, layout, projekt" />
+
+	<link href="style.css" rel="stylesheet" type="text/css"/>
+	<link href="css/fontello.css" rel="stylesheet" type="text/css"/>
+
+</head>
+
+<body>
+
+	<div class="wrapper">
+		<div class="header">
+			<div class="logo">Layout</div>
+		</div>
+		<div class="nav">
+
+			<ol>
+				<li><a href="#">Strona główna</a></li>
+				<li><a href="#">Oferta</a>
+					<ul>
+						<li><a href="#">Index 1</a></li>
+						<li><a href="#">Index 2</a></li>
+						<li><a href="#">Index 3</a></li>
+						<li><a href="#">Index 4</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Kontakt</a></li>
+				<li><a href="#">O mnie</a></li>
+			</ol>
+
+		</div>
+		<div class="content"> <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+			Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+			cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+			Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt</p> <p>in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+		 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+			Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est</p> <p>laborum.
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+			 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est</p><p>in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+			 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est</p><p>in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+			 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est</p>
+			</div>
+				<div class="socials">
+					<div class="social-divs">
+						<div class="fb"> <i class="icon-facebook-official"> </i></div>
+						<div class="tw"> <i class="icon-twitter"></i></div>
+						<div class="pin"> <i class="icon-pinterest-squared"> </i></div>
+						<div class="in"> <i class="icon-linkedin"></i> </div>
+						<div style="clear:both"></div>
+					</div>
+				</div>
+				<div class="footer">Layout&copy; 2018 </footer>
+	</div>
+
+	<script src="jquery-3.3.1.min.js"></script>
+
+	<script>
+	$(document).ready(function(){
+		var navY = $('.nav').offset().top;
+
+		var stickyNav = function(){
+			var scrollY = $(window).scrollTop();
+
+			if(scrollY > navY)
+			{
+				$('.nav').addClass('sticky');
+				$('.content').css('padding-top', '70px');
+			}
+			else
+			{
+				$('.nav').removeClass('sticky');
+				$('.content').css('padding-top', '10px');
+			}
+		};
+
+		stickyNav();
+
+		$(window).scroll(function(){
+			stickyNav();
+		});
+	});
+
+	</script>
+
+
+</body>
+</html>
